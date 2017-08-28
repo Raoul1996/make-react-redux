@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import ThemSwitch from './ThemSwitch'
 import PropTypes from 'prop-types'
-import {connect} from './react-redux'
+import {connect} from 'react-redux'
 
 class Content extends Component {
   static propTypes = {
