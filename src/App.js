@@ -17,20 +17,20 @@ function createStore(reducer) {
   return {getState, dispatch, subscribe}
 }
 
-const themReducer = (state, action) => {
+const themeReducer = (state, action) => {
   if (!state) {
     return {
-      themColor: 'red'
+      themeColor: 'red'
     }
   }
   switch (action.type) {
     case 'CHANGE_COLOR':
-      return {...state, themColor: action.themColor}
+      return {...state, themeColor: action.themeColor}
     default:
       return state
   }
 }
-const store = createStore(themReducer)
+const store = createStore(themeReducer)
 
 class App extends Component {
   static childContextTypes = {
