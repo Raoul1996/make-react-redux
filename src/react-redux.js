@@ -8,6 +8,27 @@ import PropTypes from 'prop-types'
 //     fullName: `${state.firstName} ${state.lastName}`
 //   }
 // }
+export class Provider extends Component {
+  static propTypes = {
+    store: PropTypes.object,
+    children: PropTypes.any
+  }
+  static childContextTypes = {
+    store: PropTypes.object
+  }
+
+  getChildContext() {
+    return {
+      store: this.props.store
+    }
+  }
+  render() {
+    const {children} = this.props
+    return (
+      <div>{children}</div>
+    )
+  }
+}
 
 export const connect = (mapStateToProps, mapDispatchToProps) => (WrappedComponent) => {
   class Connect extends Component {
