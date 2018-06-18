@@ -7,14 +7,18 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
-    "react-scripts": "1.0.11",
-    "redux": "^3.7.2"
+    "react-scripts": "1.1.1",
+    "redux": "^3.7.2",
+    "snyk": "^1.83.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "push": "git add . && git commit && git push origin master"
-  }
+    "push": "git add . && git commit && git push origin master",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
